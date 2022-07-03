@@ -1,0 +1,10 @@
+SELECT * FROM Walmart
+
+SELECT customer_name, product_name, state, profit FROM Walmart WHERE state = 'Washington' and customer_name = 'Ellis Ballard'
+
+SELECT customer_name, product_name, state, profit FROM Walmart WHERE state = 'Washington' and customer_name = 'Ellis Ballard' 
+order by profit DESC limit 3
+
+SELECT customer_name, product_name, state, profit, returned
+FROM Walmart JOIN Return_Order
+ON order_id = orders
